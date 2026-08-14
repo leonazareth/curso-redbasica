@@ -25,3 +25,6 @@ desktop.ini
 *.tmp
 ~$*
 _preview*.html
+
+# Notas internas de controle (pendências, lembretes) — não é conteúdo do curso
+PENDENCIAS.md
