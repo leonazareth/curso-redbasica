@@ -55,8 +55,13 @@ var CONFIG = {
     qgis: 'https://download.qgis.org/downloads/QGIS-OSGeo4W-3.44.13-1.msi',
 
     /* --- materiais do curso --- */
-    exercicio01:  '',   // exercicio_dia01.zip  (projeto QGIS do dia 1)
-    exercicio02:  '',   // exercicio_dia02.zip  → PREENCHA no fim do dia 1 para liberar o cartão
+    exercicio01:  'docs/exercicio_dia01.zip',   // projeto QGIS do dia 1
+
+    /* dia 2: arquivo já está em docs/exercicio_dia02.zip, mas o link
+       fica vazio de propósito até o fim do dia 1 — assim o cartão
+       aparece como "em breve". Para liberar, troque a linha abaixo por:
+       exercicio02: 'docs/exercicio_dia02.zip', */
+    exercicio02:  '',
     apresentacao: '',   // apresentacoes_curso.pdf
     apoio:        '',   // material_apoio.zip (documentos auxiliares, camadas soltas)
 
