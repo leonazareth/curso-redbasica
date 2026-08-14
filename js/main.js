@@ -84,7 +84,7 @@ var CONFIG = {
      https://tally.so/ — qualquer outro é ignorado.
   ----------------------------------------------------------------- */
   tally: {
-    cadastro: '',   // formulário 1 — receber novidades
+    cadastro: 'https://tally.so/embed/eqOyEk?alignLeft=1&hideTitle=1&transparentBackground=1',   // formulário 1 — receber novidades
     suporte:  ''    // formulário 2 — enviar log de suporte
   },
 
