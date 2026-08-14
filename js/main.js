@@ -85,7 +85,7 @@ var CONFIG = {
   ----------------------------------------------------------------- */
   tally: {
     cadastro: 'https://tally.so/embed/eqOyEk?alignLeft=1&hideTitle=1&transparentBackground=1',   // formulário 1 — receber novidades
-    suporte:  ''    // formulário 2 — enviar log de suporte
+    suporte:  'https://tally.so/embed/7R0jvR?alignLeft=1&hideTitle=1&transparentBackground=1'    // formulário 2 — enviar log de suporte
   },
 
   /* Altura, em pixels, da janela de cada formulário.
