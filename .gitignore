@@ -1,0 +1,27 @@
+# =====================================================================
+# ARQUIVOS QUE NUNCA DEVEM IR PARA O GITHUB
+# O repositório é público — tudo que estiver listado aqui fica só no
+# seu computador.
+# =====================================================================
+
+# Proposta comercial, contratos e qualquer documento com valores
+*.docx
+*.doc
+*.xlsx
+*.xls
+Proposta*
+
+# Cópia do layout original (só serve de referência local)
+.backup/
+
+# Logs enviados por participantes — NUNCA versionar
+logs-participantes/
+*.log
+
+# Arquivos temporários do sistema
+Thumbs.db
+desktop.ini
+.DS_Store
+*.tmp
+~$*
+_preview*.html

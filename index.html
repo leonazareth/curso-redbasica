@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ===================================================================
+     PORTAL DO CURSO SANIHUB REDBASICA
+     -------------------------------------------------------------------
+     ONDE MEXER EM CADA COISA:
+
+       • Versões, datas e TODOS os links de download ....... js/main.js
+       • Endereço dos formulários do Tally ................. js/main.js
+       • Cores, tamanhos e layout .......................... css/style.css
+       • Textos da página .................................. este arquivo
+
+     Procure por "TROQUE AQUI" neste arquivo para achar os pontos que
+     costumam precisar de ajuste (imagens e textos).
+=================================================================== -->
+
+<title>Curso SaniHUB RedBasica — Portal do participante</title>
+<meta name="description" content="Portal do participante do curso SaniHUB RedBasica: download do plugin, roteiro de instalação, materiais das aulas, simulador hidráulico e suporte.">
+<meta name="author" content="SaniHUB">
+<meta name="theme-color" content="#2F5C44">
+
+<!-- Aparência do link quando compartilhado no WhatsApp / redes sociais -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Curso SaniHUB RedBasica">
+<meta property="og:description" content="Download do plugin, instalação, materiais do curso e suporte para os participantes.">
+<meta property="og:image" content="images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="images/icon-redbasica.svg">
+<link rel="apple-touch-icon" href="images/icon-redbasica.svg">
+<link rel="stylesheet" href="css/style.css">
+
+<!-- Carrega as duas fontes mais usadas antes do resto, para o texto
+     aparecer mais rápido no celular. -->
+<link rel="preload" href="fonts/BeVietnamPro-Regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/BeVietnamPro-ExtraBold-800.woff2" as="font" type="font/woff2" crossorigin>
+
+<!-- Segurança: a página só pode carregar arquivos dela mesma; os únicos
+     conteúdos externos permitidos são os formulários do Tally. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; font-src 'self'; script-src 'self'; frame-src https://tally.so; form-action 'none'; base-uri 'self'; object-src 'none'">
+</head>
+
+<body>
+
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<!-- ============================================================
+     CABEÇALHO E MENU
+     Para renomear/remover um item do menu, edite os links abaixo.
+============================================================ -->
+<header class="site-header">
+  <div class="wrap site-header__inner">
+
+    <a class="logo" href="#topo" aria-label="Início">
+      <img src="images/icon-redbasica.svg" alt="" width="34" height="34">
+      <span class="logo__text">
+        <span class="logo__name"><span class="brand-red">Red</span><span class="brand-basica">Basica</span></span>
+        <span class="logo__sub" data-txt="cursoLabel">Curso</span>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Seções da página">
+      <a href="#sobre">Sobre</a>
+      <a href="#instalacao">Instalação</a>
+      <a href="#materiais">Materiais</a>
+      <a href="#documentacao">Documentação</a>
+      <a href="#simulador">Simulador</a>
+    </nav>
+
+    <!-- Fica fora do menu para continuar sempre visível no celular -->
+    <a class="nav-cta" href="#suporte">Suporte</a>
+
+  </div>
+</header>
+
+<main id="conteudo">
+
+<!-- ============================================================
+     1. APRESENTAÇÃO (topo da página)
+============================================================ -->
+<section id="topo" class="hero section--stamp">
+  <img class="stamp stamp--tr" src="images/manhole-stamp.svg" alt="" aria-hidden="true">
+  <div class="wrap hero__inner split">
+
+    <div>
+      <p class="eyebrow">Portal do participante</p>
+      <h1 class="h1">Curso <span class="brand-red">Red</span><span class="brand-basica">Basica</span></h1>
+
+      <p class="lead lead--big mb-14">O SaniHUB RedBasica é uma ferramenta livre e gratuita para traçado e
+        dimensionamento de redes coletoras de esgoto, integrada ao QGIS.</p>
+
+      <p class="text-aux mb-32 w-52">Nesta página você encontra o download do plugin, o roteiro de
+        instalação, os materiais dos exercícios e o canal de suporte usado durante as aulas.</p>
+
+      <div class="btn-row">
+        <a class="btn btn--primary" href="#instalacao" data-link="download">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M4 21h16"/></svg>
+          Baixar o RedBasica
+        </a>
+        <a class="btn btn--soft" href="#materiais">
+          Materiais do curso
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Cartão de versões: os valores vêm de js/main.js -->
+    <div class="spec">
+      <p class="spec__title">Versão distribuída no curso</p>
+      <dl>
+        <dt>RedBasica</dt>
+        <dd data-txt="versao.plugin">—</dd>
+
+        <dt><img src="images/qgis-logo.png" alt="" width="20" height="20"> QGIS compatível</dt>
+        <dd><a data-link="qgis" href="#"><span data-txt="versao.qgis">—</span> ↓</a></dd>
+
+        <dt>Atualização</dt>
+        <dd data-txt="versao.atualizacao">—</dd>
+      </dl>
+      <p class="spec__note">Software livre e open-source, distribuído sem custo de licenciamento.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SOBRE O SOFTWARE
+============================================================ -->
+<section id="sobre" class="wrap section">
+  <p class="eyebrow">Sobre o software</p>
+  <h2 class="h2 mb-44">O que o RedBasica faz</h2>
+
+  <div class="grid">
+    <article class="card">
+      <h3 class="h3">Traçado e dimensionamento</h3>
+      <p class="text">Reúne no QGIS o traçado da rede, o lançamento de vazões e os cálculos e verificações
+        hidráulicas segundo a NBR 9649.</p>
+    </article>
+    <article class="card">
+      <h3 class="h3">Produtos de projeto</h3>
+      <p class="text">Gera as planilhas de cálculo, a planilha de campo e as plantas de projeto a partir da
+        própria rede dimensionada.</p>
+    </article>
+    <article class="card">
+      <h3 class="h3">Livre e sem custo</h3>
+      <p class="text">Desenvolvido com apoio do BID, da AECID e da União Europeia dentro da plataforma SaniHUB.
+        Uso livre por projetistas, prestadores, universidades e órgãos públicos.</p>
+    </article>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     2. DOWNLOAD E INSTALAÇÃO
+============================================================ -->
+<section id="instalacao" class="section--paper">
+  <div class="wrap section">
+    <p class="eyebrow">01 · Antes da aula</p>
+    <h2 class="h2">Download e instalação</h2>
+    <p class="lead mb-44">Faça isto antes da primeira aula. A instalação leva menos de cinco minutos.</p>
+
+    <div class="split">
+
+      <ol class="steps">
+        <li>
+          <span class="steps__num">1</span>
+          <div>
+            <p class="steps__title">Baixe o arquivo ZIP do plugin</p>
+            <p class="text-aux">Não descompacte o arquivo — o QGIS instala a partir do próprio ZIP.</p>
+          </div>
+        </li>
+        <li>
+          <span class="steps__num">2</span>
+          <div>
+            <p class="steps__title">Abra o QGIS</p>
+            <p class="text-aux">Versão <span data-txt="versao.qgis">—</span> ou superior.</p>
+          </div>
+        </li>
+        <li>
+          <span class="steps__num">3</span>
+          <div>
+            <p class="steps__title">Vá em Plugins → Manage and Install Plugins</p>
+            <p class="text-aux">Depois abra a aba <code>Install from ZIP</code>.</p>
+          </div>
+        </li>
+        <li>
+          <span class="steps__num">4</span>
+          <div>
+            <p class="steps__title">Selecione o arquivo baixado</p>
+            <p class="text-aux">Clique em <strong>Install Plugin</strong> e aguarde a confirmação.</p>
+          </div>
+        </li>
+        <li>
+          <span class="steps__num">5</span>
+          <div>
+            <p class="steps__title">Ative o RedBasica</p>
+            <p class="text-aux">Na aba <code>Installed</code>, marque a caixa ao lado do plugin. O ícone aparece na
+              barra de ferramentas.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="aside-col">
+
+        <!-- TROQUE AQUI (imagem 1): apague a <div class="ph"> abaixo e use:
+             <img src="images/instalacao-menu.png" alt="Tela do QGIS: menu Plugins → Manage and Install Plugins"> -->
+        <figure class="figure">
+          <div class="ph ph--tall"><span>images/instalacao-menu.png<br>Tela do QGIS: Plugins → Manage and Install Plugins</span></div>
+          <figcaption>Passo 3 · caminho do menu</figcaption>
+        </figure>
+
+        <!-- TROQUE AQUI (imagem 2): apague a <div class="ph"> abaixo e use:
+             <img src="images/instalacao-zip.png" alt="Aba Install from ZIP com o arquivo selecionado"> -->
+        <figure class="figure">
+          <div class="ph ph--tall"><span>images/instalacao-zip.png<br>Aba Install from ZIP com o arquivo selecionado</span></div>
+          <figcaption>Passos 4 e 5 · instalação e ativação</figcaption>
+        </figure>
+
+        <a class="btn btn--primary btn--block" href="#instalacao" data-link="download">
+          Baixar RedBasica <span data-txt="versao.plugin">—</span> (.zip)
+        </a>
+
+        <div class="qgis-box">
+          <img src="images/qgis-logo.png" alt="QGIS" width="72" height="72">
+          <div>
+            <p class="mini-label">Não tem o QGIS?</p>
+            <p class="text-mini mb-8">O RedBasica <span data-txt="versao.plugin">—</span> foi testado no QGIS
+              <span data-txt="versao.qgis">—</span>.</p>
+            <a class="btn-link" data-link="qgis" href="#">Baixar QGIS <span data-txt="versao.qgis">—</span> <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     3. MATERIAIS DO CURSO
+     Cada cartão vira um link ativo automaticamente quando você
+     preencher o endereço correspondente em js/main.js.
+============================================================ -->
+<section id="materiais" class="wrap section">
+  <p class="eyebrow">02 · Durante o curso</p>
+  <h2 class="h2">Materiais do curso</h2>
+  <p class="lead mb-44">Arquivos dos exercícios, apresentações e documentos de apoio usados nas aulas.</p>
+
+  <div class="grid">
+
+    <!-- Exercício do dia 1 -->
+    <article class="card card--soft card--flex" data-material="exercicio01">
+      <span class="badge" data-when="ready">ZIP · Dia 1</span>
+      <span class="badge badge--locked" data-when="pending">ZIP · Dia 1 · em breve</span>
+      <p class="file-name">exercicio_dia01.zip</p>
+      <p class="text-aux card__grow mb-20">Projeto QGIS do primeiro dia, com todas as camadas já incluídas.</p>
+      <a class="btn-link" data-when="ready" data-link="exercicio01" href="#">Baixar <span aria-hidden="true">↓</span></a>
+      <p class="locked-note" data-when="pending">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+        Disponível no início da aula.
+      </p>
+    </article>
+
+    <!-- Exercício do dia 2 — liberado ao preencher "exercicio02" em js/main.js -->
+    <article class="card card--soft card--flex" data-material="exercicio02">
+      <span class="badge" data-when="ready">ZIP · Dia 2</span>
+      <span class="badge badge--locked" data-when="pending">ZIP · Dia 2 · bloqueado</span>
+      <p class="file-name">exercicio_dia02.zip</p>
+      <p class="text-aux card__grow mb-20">Projeto QGIS do segundo dia, continuação do exercício anterior.</p>
+      <a class="btn-link" data-when="ready" data-link="exercicio02" href="#">Baixar <span aria-hidden="true">↓</span></a>
+      <p class="locked-note" data-when="pending">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+        Liberado ao final do primeiro dia de aula.
+      </p>
+    </article>
+
+    <!-- Apresentações -->
+    <article class="card card--soft card--flex" data-material="apresentacao">
+      <span class="badge" data-when="ready">PDF</span>
+      <span class="badge badge--locked" data-when="pending">PDF · em breve</span>
+      <p class="file-name">apresentacoes_curso.pdf</p>
+      <p class="text-aux card__grow mb-20">Slides das aulas: conceitos, parâmetros e normas, metodologia de traçado e
+        dimensionamento.</p>
+      <a class="btn-link" data-when="ready" data-link="apresentacao" href="#">Baixar <span aria-hidden="true">↓</span></a>
+      <p class="locked-note" data-when="pending">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+        Disponível durante o curso.
+      </p>
+    </article>
+
+    <!-- Documentos auxiliares -->
+    <article class="card card--soft card--flex" data-material="apoio">
+      <span class="badge" data-when="ready">ZIP</span>
+      <span class="badge badge--locked" data-when="pending">ZIP · em breve</span>
+      <p class="file-name">material_apoio.zip</p>
+      <p class="text-aux card__grow mb-20">Documentos auxiliares: tabelas de referência, roteiros e camadas
+        individuais para quem preferir montar o projeto do zero.</p>
+      <a class="btn-link" data-when="ready" data-link="apoio" href="#">Baixar <span aria-hidden="true">↓</span></a>
+      <p class="locked-note" data-when="pending">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+        Disponível durante o curso.
+      </p>
+    </article>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     DOCUMENTAÇÃO
+============================================================ -->
+<section id="documentacao" class="section--paper">
+  <div class="wrap section">
+    <p class="eyebrow">Consulta</p>
+    <h2 class="h2">Documentação</h2>
+    <p class="lead mb-44">Material de referência para consultar durante e depois do curso.</p>
+
+    <ul class="doc-list">
+      <li>
+        <a data-link="manual" href="#">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          <span>
+            <span class="doc-list__label">Manual de instalação e uso</span>
+            <span class="doc-list__desc">Documento em PDF com o passo a passo completo do plugin.</span>
+          </span>
+          <span class="doc-list__arrow" aria-hidden="true">↓</span>
+        </a>
+      </li>
+      <li>
+        <a data-link="site" href="#" target="_blank" rel="noopener noreferrer">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span>
+            <span class="doc-list__label">sanihub.org</span>
+            <span class="doc-list__desc">Site da plataforma SaniHUB, com as demais ferramentas e publicações.</span>
+          </span>
+          <span class="doc-list__arrow" aria-hidden="true">↗</span>
+        </a>
+      </li>
+      <li>
+        <a data-link="repositorio" href="#" target="_blank" rel="noopener noreferrer">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+          <span>
+            <span class="doc-list__label">Código-fonte no GitHub</span>
+            <span class="doc-list__desc">Repositório do plugin, histórico de versões e registro de problemas.</span>
+          </span>
+          <span class="doc-list__arrow" aria-hidden="true">↗</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     4. SIMULADOR HIDRÁULICO
+============================================================ -->
+<section id="simulador" class="section--navy">
+  <div class="wrap sim split split--center">
+    <div>
+      <p class="eyebrow eyebrow--light">Ferramenta complementar</p>
+      <h2 class="h2 h2--light">Sewerage Hydraulic Simulator</h2>
+      <p class="lead">Simulador aberto, que roda no navegador, para visualizar e testar os cálculos hidráulicos
+        usados no dimensionamento das redes. Útil para conferir resultados e entender o efeito de cada parâmetro.</p>
+    </div>
+    <div>
+      <a class="btn btn--sage" data-link="simulador" href="#" target="_blank" rel="noopener noreferrer">
+        Abrir o simulador
+        <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     5. CADASTRO DOS PARTICIPANTES (formulário Tally nº 1)
+     O formulário aparece sozinho assim que você preencher
+     TALLY.cadastro em js/main.js.
+============================================================ -->
+<section id="cadastro" class="wrap section">
+  <div class="split">
+
+    <div>
+      <p class="eyebrow">Opcional</p>
+      <h2 class="h2 mb-20">Receber novidades</h2>
+      <p class="text text--16 mb-20">Se quiser ser avisado sobre novas versões do RedBasica, novos
+        cursos, treinamentos e materiais relacionados, deixe seu contato.</p>
+
+      <ul class="bullets">
+        <li>Novas versões e correções do plugin</li>
+        <li>Próximas turmas e treinamentos</li>
+        <li>Materiais técnicos e tutoriais</li>
+      </ul>
+
+      <p class="text-mini divider-top">O cadastro é voluntário. Os dados ficam armazenados no Tally, não neste site,
+        e são usados apenas para os avisos acima. Você pode pedir a remoção a qualquer momento pelo e-mail do
+        contato no rodapé.</p>
+    </div>
+
+    <!-- Espaço do formulário de cadastro -->
+    <div>
+    <div class="tally-slot" data-tally="cadastro" data-altura="640">
+      <div class="placeholder-form">
+        <p class="placeholder-form__tag">Espaço reservado</p>
+        <p class="placeholder-form__title">Formulário de cadastro (Tally)</p>
+        <p class="placeholder-form__desc">Cole o endereço do formulário em <code>js/main.js</code>, no campo
+          <code>TALLY.cadastro</code>. Campos sugeridos: nome, e-mail, instituição ou empresa, cargo / área de
+          atuação, país e a caixa de consentimento.</p>
+        <div class="skeleton" aria-hidden="true">
+          <div></div><div></div><div></div><div class="short"></div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     6. SUPORTE DURANTE O CURSO (formulário Tally nº 2)
+============================================================ -->
+<section id="suporte" class="section--paper section--stamp">
+  <img class="stamp stamp--bl" src="images/manhole-stamp.svg" alt="" aria-hidden="true">
+  <div class="wrap section">
+    <p class="eyebrow">03 · Durante as aulas</p>
+    <h2 class="h2">Preciso de ajuda</h2>
+    <p class="lead mb-44">Travou em algum passo? Envie o arquivo de log gerado pelo RedBasica junto com uma descrição
+      curta do problema. O instrutor recebe o arquivo e responde durante a aula.</p>
+
+    <div class="split">
+
+      <div class="card card--round card--soft">
+        <h3 class="h3 mb-18">Como gerar o arquivo de log</h3>
+        <ol class="numbered">
+          <li><span class="numbered__n">01</span><span>Salve o projeto do QGIS (o log só grava com o projeto salvo).</span></li>
+          <li><span class="numbered__n">02</span><span>No painel do RedBasica, abra a aba <strong>Ferramentas</strong>.</span></li>
+          <li><span class="numbered__n">03</span><span>Em <strong>Log da sessão</strong>, ligue <strong>Gravar log da sessão</strong>.</span></li>
+          <li><span class="numbered__n">04</span><span>Refaça a ação que deu problema.</span></li>
+          <li><span class="numbered__n">05</span><span>Clique em <strong>Exportar log…</strong> e salve o arquivo.</span></li>
+        </ol>
+
+        <div class="divider-top">
+          <p class="mini-label">Onde o arquivo fica</p>
+
+          <!-- TROQUE AQUI (imagem 3): apague a <div class="ph"> abaixo e use:
+               <img src="images/log-painel.png" alt="Painel do RedBasica na aba Ferramentas, com o Log da sessão"> -->
+          <div class="ph ph--short"><span>images/log-painel.png<br>Painel do RedBasica → aba Ferramentas → Log da sessão</span></div>
+
+          <p class="text-mini mt-12">O arquivo é salvo na pasta do projeto, dentro de
+            <code>redbasica_logs</code>. É um arquivo de texto pequeno, com o histórico das ações realizadas —
+            envie a versão mais recente.</p>
+        </div>
+      </div>
+
+      <div>
+        <!-- Espaço do formulário de suporte -->
+        <div class="tally-slot" data-tally="suporte" data-altura="700">
+          <div class="placeholder-form placeholder-form--white">
+            <p class="placeholder-form__tag">Espaço reservado</p>
+            <p class="placeholder-form__title">Formulário de suporte (Tally)</p>
+            <p class="placeholder-form__desc">Cole o endereço do formulário em <code>js/main.js</code>, no campo
+              <code>TALLY.suporte</code>. Campos: nome, e-mail (opcional), descrição do problema, upload do log
+              (.md, .txt, .log) e captura de tela (opcional).</p>
+            <div class="skeleton" aria-hidden="true">
+              <div></div><div></div><div class="tall"></div>
+              <div class="upload">upload do log</div>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-mini mt-16">Formatos aceitos: <code>.md</code>, <code>.txt</code>,
+          <code>.log</code> e imagens. Os arquivos ficam armazenados no Tally e são usados apenas para o
+          atendimento durante o curso.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+<!-- ============================================================
+     RODAPÉ
+============================================================ -->
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <div>
+      <p class="site-footer__brand"><span class="brand-red">Red</span><span class="brand-basica">Basica</span></p>
+      <p class="mb-6">Portal de cursos e treinamentos · SaniHUB</p>
+      <p class="site-footer__meta">
+        v<span data-txt="versao.plugin">—</span> ·
+        QGIS <span data-txt="versao.qgis">—</span> ·
+        <span data-txt="versao.atualizacao">—</span>
+      </p>
+      <!-- TROQUE AQUI: e-mail de contato exibido no rodapé -->
+      <p class="site-footer__meta mt-10">contato: sanihub.rb@gmail.com</p>
+    </div>
+
+    <div class="site-footer__links">
+      <a href="#instalacao" data-link="download">Download do RedBasica</a>
+      <a href="#materiais">Materiais do curso</a>
+      <a href="#cadastro">Receber novidades</a>
+      <a data-link="qgis" href="#">Download do QGIS <span aria-hidden="true">↗</span></a>
+      <a data-link="simulador" href="#" target="_blank" rel="noopener noreferrer">Sewerage Hydraulic Simulator <span aria-hidden="true">↗</span></a>
+      <a href="#suporte">Suporte do curso</a>
+    </div>
+  </div>
+
+  <div class="site-footer__bar">
+    <div class="wrap"><p>Software livre e open-source. Este portal é estático e não armazena dados dos
+      participantes: os formulários e os arquivos enviados ficam no Tally.</p></div>
+  </div>
+</footer>
+
+
+<!-- ============================================================
+     BOTÃO FLUTUANTE DE SUPORTE (visível o tempo todo)
+============================================================ -->
+<a class="fab" href="#suporte">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+  Preciso de ajuda
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>
