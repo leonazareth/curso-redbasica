@@ -27,9 +27,25 @@ var CONFIG = {
      Aparecem no cartão do topo, nos botões e no rodapé.
   ----------------------------------------------------------------- */
   versao: {
-    plugin:      '1.9 beta',      // versão do RedBasica distribuída no curso
-    qgis:        '3.44',          // versão do QGIS usada nas aulas
-    atualizacao: 'Agosto/2026'    // data da última atualização desta página
+    plugin:      '1.9 beta',
+    qgis:        '3.44',
+    atualizacao: 'Agosto/2026'
+  },
+  
+  links: {
+    download: 'https://github.com/leonazareth/curso-redbasica/releases/download/v1.9-beta/RedBasica-1.9-beta.zip',
+  
+    exercicio01:  '',
+    exercicio02:  '',
+    apresentacao: '',
+    apoio:        '',
+  
+    manual: '',
+  },
+  
+  tally: {
+    cadastro: 'https://tally.so/embed/wABC12?hideTitle=1&transparentBackground=1',
+    suporte:  'https://tally.so/embed/wXYZ89?hideTitle=1&transparentBackground=1'
   },
 
   /* Texto pequeno que aparece embaixo do logo, no topo da página */
