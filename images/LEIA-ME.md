@@ -11,22 +11,13 @@ Aqui ficam as imagens do site.
 | `manhole-lid.svg` | Desenho alternativo da tampa (reserva) |
 | `qgis-logo.png` | Logo do QGIS |
 | `og-image.png` | Imagem que aparece quando o link é enviado no WhatsApp |
+| `instalacao-menu.png` | Menu do QGIS `Complementos → Gerenciar e Instalar Complementos` |
+| `instalacao-zip.png` | Aba `Instalar a partir do ZIP` |
+| `log-painel.gif` | Animação do painel do RedBasica gravando e exportando o Log da sessão |
 
-## Imagens que você ainda vai colocar
-
-O site tem 3 espaços reservados esperando um print de tela. Salve os
-arquivos aqui com **exatamente estes nomes**:
-
-| Nome do arquivo | O que deve mostrar |
-| --- | --- |
-| `instalacao-menu.png` | Tela do QGIS no menu `Plugins → Manage and Install Plugins` |
-| `instalacao-zip.png` | Aba `Install from ZIP` com o arquivo selecionado |
-| `log-painel.png` | Painel do RedBasica na aba **Ferramentas**, mostrando o **Log da sessão** |
-
-Depois de salvar as imagens aqui, abra o `index.html`, procure por
-**TROQUE AQUI** e siga a instrução do comentário: são 3 lugares, e em
-cada um você apaga a linha do `<div class="ph">…</div>` e coloca no
-lugar a linha `<img …>` que já está escrita no comentário logo acima.
+Os 3 espaços reservados do site já foram preenchidos — não há mais
+`<div class="ph">` no `index.html`. Para trocar qualquer uma dessas
+imagens, basta substituir o arquivo aqui mantendo o mesmo nome.
 
 ## Dicas
 
