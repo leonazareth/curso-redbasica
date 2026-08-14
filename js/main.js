@@ -27,25 +27,9 @@ var CONFIG = {
      Aparecem no cartão do topo, nos botões e no rodapé.
   ----------------------------------------------------------------- */
   versao: {
-    plugin:      '1.9 beta',
-    qgis:        '3.44',
-    atualizacao: 'Agosto/2026'
-  },
-  
-  links: {
-    download: 'https://github.com/leonazareth/curso-redbasica/releases/download/v1.9-beta/RedBasica-1.9-beta.zip',
-  
-    exercicio01:  '',
-    exercicio02:  '',
-    apresentacao: '',
-    apoio:        '',
-  
-    manual: '',
-  },
-  
-  tally: {
-    cadastro: 'https://tally.so/embed/wABC12?hideTitle=1&transparentBackground=1',
-    suporte:  'https://tally.so/embed/wXYZ89?hideTitle=1&transparentBackground=1'
+    plugin:      '1.9 beta',      // versão do RedBasica distribuída no curso
+    qgis:        '3.44',          // versão do QGIS usada nas aulas
+    atualizacao: 'Agosto/2026'    // data da última atualização desta página
   },
 
   /* Texto pequeno que aparece embaixo do logo, no topo da página */
@@ -60,12 +44,12 @@ var CONFIG = {
        GitHub → seu repositório → Releases → clique com o botão
        direito no arquivo .zip → "Copiar endereço do link".
        Fica parecido com:
-       https://github.com/leonazareth/curso-redbasica/releases/download/v1.9-beta/RedBasica-1.9-beta.zip
+       https://github.com/leonazareth/red_basica/releases/download/v1.9-beta/red_basica-1.9beta.zip
   ----------------------------------------------------------------- */
   links: {
 
     /* --- o mais importante: o ZIP do plugin --- */
-    download: '',
+    download: 'https://github.com/leonazareth/red_basica/releases/download/v1.9-beta/red_basica-1.9beta.zip',
 
     /* --- instalador do QGIS (link oficial) --- */
     qgis: 'https://download.qgis.org/downloads/QGIS-OSGeo4W-3.44.13-1.msi',
@@ -79,7 +63,7 @@ var CONFIG = {
     /* --- documentação --- */
     manual:      '',                                  // manual de instalação e uso (PDF)
     site:        'https://sanihub.org',               // site da plataforma
-    repositorio: 'https://github.com/sanihub/red_basica',  // código-fonte
+    repositorio: 'https://github.com/leonazareth/red_basica',  // código-fonte
 
     /* --- simulador hidráulico --- */
     simulador: 'https://leonazareth.github.io/sewerage_hydraulic_simulator/'
