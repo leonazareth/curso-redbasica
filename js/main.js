@@ -57,12 +57,8 @@ var CONFIG = {
     /* --- materiais do curso --- */
     exercicio01:  'docs/exercicio_dia01.zip',   // projeto QGIS do dia 1
 
-    /* dia 2: arquivo já está em docs/exercicio_dia02.zip, mas o link
-       fica vazio de propósito até o fim do dia 1 — assim o cartão
-       aparece como "em breve". Para liberar, troque a linha abaixo por:
-       exercicio02: 'docs/exercicio_dia02.zip', */
-    exercicio02:  '',
-    apresentacao: '',   // apresentacoes_curso.pdf
+    exercicio02:  'docs/exercicio_dia02.zip',   // projeto QGIS do dia 2
+    apresentacao: 'docs/apresentacoes_curso.pdf',   // slides das aulas
     apoio:        '',   // material_apoio.zip (documentos auxiliares, camadas soltas)
 
     /* --- documentação --- */
